@@ -56,7 +56,6 @@ class CourseResource extends Resource
                     ->sortable(),
                 Tables\Columns\TextColumn::make('description')
                     ->label('Descrição')
-                    ->description('Resumo do curso')
                     ->sortable()
                     ->limit(60)
                     ->toggleable(isToggledHiddenByDefault: true),
