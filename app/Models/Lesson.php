@@ -15,12 +15,10 @@ class Lesson extends Model
         'description',
         'video',
         'duration',
-        'is_free',
     ];
 
     public function module()
     {
         return $this->belongsTo(Module::class);
     }
-    
 }

@@ -17,7 +17,7 @@ return new class extends Migration
             $table->string('name');
             $table->text('description');
             $table->string('video');
-            $table->integer('duration');
+            $table->string('duration');
             $table->boolean('is_free')->default(true);
             $table->timestamps();
         });
