@@ -44,9 +44,8 @@ class LessonResource extends Resource
                     ->columns(3)
                     ->schema([
                         Forms\Components\TextInput::make('video')
-                            ->label('URL do vídeo')
-                            ->url()
-                            ->suffixIcon('heroicon-m-globe-alt')
+                            ->label('ID do vídeo')
+                            ->suffixIcon('heroicon-m-video-camera')
                             ->required()
                             ->maxLength(255),
                         Forms\Components\Select::make('module_id')
@@ -82,9 +81,9 @@ class LessonResource extends Resource
                     ->label('Título')
                     ->searchable(),
                 Tables\Columns\TextColumn::make('video')
-                    ->label('URL do vídeo')
-                    ->copyMessage('URL do vídeo copiada')
-                    ->copyableState('Copiar URL do vídeo')
+                    ->label('ID do vídeo')
+                    ->copyMessage('ID do vídeo copiada')
+                    ->copyableState('Copiar ID do vídeo')
                     ->copyable()
                     ->searchable(),
                 Tables\Columns\TextColumn::make('module.name')

@@ -12,6 +12,7 @@ export default {
         "./resources/**/*.js",
         "./resources/**/*.vue",
         './vendor/tallstackui/tallstackui/src/**/*.php',
+        "./node_modules/flowbite/**/*.js"
 
     ],
     theme: {
@@ -22,6 +23,6 @@ export default {
             }
         },
     },
-    plugins: [forms],
+    plugins: [forms, require('flowbite/plugin')],
 
 }

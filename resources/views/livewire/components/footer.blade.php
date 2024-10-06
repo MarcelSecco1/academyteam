@@ -1,7 +1,6 @@
 <footer class="bg-white">
-    <div class="mx-auto max-w-7xl px-6 py-12 md:flex md:items-center md:justify-between lg:px-8">
-        <div class="flex justify-center space-x-6 md:order-2">
-
+    <div class="mx-auto  px-6 py-12 md:flex md:items-center md:justify-between lg:px-8">
+        <div class="flex justify-end space-x-6 md:order-2">
             <a href="{{ __('https://github.com/MarcelSecco1/academyteam') }}" class="text-primary hover:text-verde"
                 target="_blank">
                 <span class="sr-only">GitHub</span>

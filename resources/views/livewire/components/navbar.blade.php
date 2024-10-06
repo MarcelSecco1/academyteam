@@ -29,8 +29,10 @@
             <!-- Sidebar component, swap this element with another sidebar if you like -->
             <div class="flex grow flex-col gap-y-5 overflow-y-auto bg-white px-6 pb-2">
                 <div class="flex h-16 shrink-0 items-center">
-                    <img class="h-8 w-auto" src="https://tailwindui.com/plus/img/logos/mark.svg?color=white"
-                        alt="Your Company">
+                    <a href="{{ route('home') }}" wire:navigate>
+                        <img class="h-8 w-auto" src="https://tailwindui.com/plus/img/logos/mark.svg?color=white"
+                            alt="Your Company">
+                    </a>
                 </div>
                 <nav class="flex flex-1 flex-col">
                     <ul role="list" class="flex flex-1 flex-col gap-y-7">
@@ -144,8 +146,10 @@
         <!-- Sidebar component, swap this element with another sidebar if you like -->
         <div class="flex grow flex-col gap-y-5 overflow-y-auto bg-white-600 px-6">
             <div class="flex h-16 shrink-0 items-center justify-center mt-5">
-                <img class="text-center" src="{{ asset('assets/images/Full-A.png') }}" alt="Your Company"
-                    height="150px" width="150px">
+                <a href="{{ route('home') }}" wire:navigate>
+                    <img class="text-center" src="{{ asset('assets/images/Full-A.png') }}" alt="Your Company"
+                        height="150px" width="150px">
+                </a>
             </div>
             <nav class="flex flex-1 flex-col">
                 <ul role="list" class="flex flex-1 flex-col gap-y-7">
@@ -192,7 +196,7 @@
                             </li>
 
                             <li>
-                                <a href="#"
+                                <a href="{{ route('changelog') }}" wire:navigate
                                     class="group flex gap-x-3 rounded-md p-2 text-sm font-semibold leading-6 {{ request()->is('atualizacoes') ? 'bg-primary text-white' : 'text-primary hover:text-white hover:bg-primary' }}">
                                     <svg class="h-6 w-6 shrink-0 {{ request()->is('atualizacoes') ? 'text-white' : 'text-primary group-hover:text-white' }}"
                                         xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
