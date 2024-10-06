@@ -2,52 +2,44 @@
 
 namespace App\Filament\Resources;
 
-use App\Filament\Resources\CourseResource\Pages;
-use App\Filament\Resources\CourseResource\RelationManagers;
-use App\Models\Course;
+use App\Filament\Resources\CoursesMinisterResource\Pages;
+use App\Filament\Resources\CoursesMinisterResource\RelationManagers;
 use App\Models\CoursesMinister;
 use Filament\Forms;
-use Filament\Forms\Components\FileUpload;
-use Filament\Forms\Components\Select;
-use Filament\Forms\Components\TextInput;
 use Filament\Forms\Form;
 use Filament\Resources\Resource;
 use Filament\Tables;
-use Filament\Tables\Filters\SelectFilter;
 use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
 
-class CourseResource extends Resource
+class CoursesMinisterResource extends Resource
 {
-    protected static ?string $model = Course::class;
-    protected static ?string $modelLabel = 'Curso';
-    protected static ?string $pluralModelLabel = 'Cursos';
+    protected static ?string $model = CoursesMinister::class;
 
+    protected static ?string $modelLabel = 'Ministrante';
+    protected static ?string $pluralModelLabel = 'Ministrantes';
 
-    protected static ?string $navigationIcon = 'heroicon-o-academic-cap';
+    protected static ?string $navigationIcon = 'heroicon-o-user';
 
     public static function form(Form $form): Form
     {
         return $form
             ->schema([
-                FileUpload::make('image')
+                Forms\Components\FileUpload::make('image')
                     ->label('Imagem')
+                    ->columnSpan('full')
                     ->image()
-                    ->columnSpan('full'),
-                TextInput::make('name')
-                    ->prefix('Curso de')
+                    ->required(),
+                Forms\Components\TextInput::make('name')
                     ->label('Nome')
-                    ->required(),
-                Select::make('minister_id')
-                    ->label('Ministrante')
-                    ->placeholder('Selecione um ministrante')
-                    ->options(CoursesMinister::all()->pluck('name', 'id'))
-                    ->required(),
+                    ->required()
+                    ->maxLength(255),
 
-                TextInput::make('description')
-                    ->label('Descrição')
-                    ->columnSpanFull()
+                Forms\Components\TextInput::make('email')
+                    ->label('E-mail')
+                    ->email()
+                    ->required()
                     ->maxLength(255),
 
             ]);
@@ -65,17 +57,10 @@ class CourseResource extends Resource
                     ->label('Nome')
                     ->searchable()
                     ->sortable(),
-                Tables\Columns\TextColumn::make('minister.name')
-                    ->label('Ministrante')
-                    ->searchable()
-                    ->sortable(),
-
-                Tables\Columns\TextColumn::make('description')
-                    ->label('Descrição')
+                Tables\Columns\TextColumn::make('email')
+                    ->label('E-mail')
                     ->sortable()
-                    ->limit(60)
-                    ->toggleable(isToggledHiddenByDefault: true),
-
+                    ->toggleable(isToggledHiddenByDefault: false),
                 Tables\Columns\TextColumn::make('created_at')
                     ->label('Criado em')
                     ->dateTime('d/m/Y H:i:s')
@@ -87,12 +72,7 @@ class CourseResource extends Resource
                     ->sortable()
                     ->toggleable(isToggledHiddenByDefault: true),
             ])
-            ->filters([
-                SelectFilter::make('minister_id')
-                    ->label('Ministrante')
-                    ->options(fn() => CoursesMinister::all()->pluck('name', 'id')->toArray()),
-
-            ])
+            ->filters([])
             ->actions([
                 Tables\Actions\EditAction::make(),
             ])
@@ -113,9 +93,9 @@ class CourseResource extends Resource
     public static function getPages(): array
     {
         return [
-            'index' => Pages\ListCourses::route('/'),
-            'create' => Pages\CreateCourse::route('/create'),
-            'edit' => Pages\EditCourse::route('/{record}/edit'),
+            'index' => Pages\ListCoursesMinisters::route('/'),
+            'create' => Pages\CreateCoursesMinister::route('/create'),
+            'edit' => Pages\EditCoursesMinister::route('/{record}/edit'),
         ];
     }
 }

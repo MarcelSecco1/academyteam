@@ -11,15 +11,11 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('lessons', function (Blueprint $table) {
+        Schema::create('courses_ministers', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('module_id')->constrained()->onDelete('cascade');
-            $table->uuid('uuid')->unique();
             $table->string('name');
-            $table->text('description');
-            $table->string('video');
-            $table->string('duration');
-            $table->boolean('is_free')->default(true);
+            $table->string('email');
+            $table->string('image');
             $table->timestamps();
         });
     }
@@ -29,6 +25,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('lessons');
+        Schema::dropIfExists('courses_ministers');
     }
 };

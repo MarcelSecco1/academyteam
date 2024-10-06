@@ -32,7 +32,7 @@ class AdminPanelProvider extends PanelProvider
             ])
             ->brandLogo(asset('assets/images/Full-A.png'))
             ->brandLogoHeight('125px')
-            ->favicon(asset('images/Full-A.png'))
+            ->favicon(asset('assets/images/200x200.png'))
             ->discoverResources(in: app_path('Filament/Resources'), for: 'App\\Filament\\Resources')
             ->discoverPages(in: app_path('Filament/Pages'), for: 'App\\Filament\\Pages')
             ->pages([
