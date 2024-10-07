@@ -1,6 +1,12 @@
 <footer class="bg-white">
-    <div class="mx-auto  px-6 py-12 md:flex md:items-center md:justify-between lg:px-8">
-        <div class="flex justify-end space-x-6 md:order-2">
+    <div class="mx-auto px-6 py-12 md:flex md:items-center md:justify-center lg:px-8 flex-col space-y-4">
+        <img src="{{ asset('assets/images/200x200.png') }}" alt="AcademyTeam" height="50px" width="50px">
+        <div class="mt-8 md:order-1 md:mt-0">
+            <p class="text-center text-sm leading-5 text-primary font-semibold">&copy; 2024 AcademyTeam, feito por
+                alunos
+            </p>
+        </div>
+        <div class="flex justify-center space-x-6 md:order-2">
             <a href="{{ __('https://github.com/MarcelSecco1/academyteam') }}" class="text-primary hover:text-verde"
                 target="_blank">
                 <span class="sr-only">GitHub</span>
@@ -20,10 +26,6 @@
                 </svg>
             </a>
         </div>
-        <div class="mt-8 md:order-1 md:mt-0">
-            <p class="text-center text-sm leading-5 text-primary font-semibold">&copy; 2024 AcademyTeam, feito por
-                alunos
-            </p>
-        </div>
+
     </div>
 </footer>

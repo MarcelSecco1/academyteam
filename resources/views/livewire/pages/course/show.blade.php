@@ -1,12 +1,12 @@
-<div>
-    <div class="bg-white py-3">
-        <div class="flex justify-center flex-col lg:flex-row">
-            <h2 class="text-4xl font-bold tracking-tight sm:text-4xl text-primary text-center">
-                Bem vindo ao Curso de {{ $course->name }}!!
-            </h2>
-        </div>
-        <div class="flex justify-center lg:my-10 lg:mx-16">
-            <div class="flex justify-center  flex-col lg:flex-row">
+<div class="bg-white py-24 sm:py-10">
+    <div class="mx-auto max-w-2xl px-6 lg:max-w-7xl lg:px-8">
+        <h2 class="text-base/7 font-semibold text-primary">Cursos / Curso de {{ $course->name }}</h2>
+        <p class="mt-2 max-w-xl text-pretty text-4xl font-medium tracking-tight text-gray-950 sm:text-5xl">
+            Bem vindo ao Curso de {{ $course->name }}
+        </p>
+
+        <div class="flex justify-center lg:my-10">
+            <div class="flex justify-center flex-col lg:flex-row">
                 <div class="flex justify-center my-10 lg:my-0">
                     <img src="{{ '/storage/' . $course->image }}" alt="{{ $course->name }}"
                         class="rounded-2xl object-cover" width="200px" height="200px" class="mx-auto">
@@ -28,13 +28,13 @@
             </div>
         </div>
         <div class="mt-10">
-            <div class="flex justify-start lg:mx-16 lg:mt-11">
+            <div class="flex justify-start lg:mt-11">
                 <h2 class="text-2xl font-bold tracking-tight text-gray-900 sm:text-2xl text-primary text-center">
                     {{ $lessonShow->name }}
                 </h2>
             </div>
         </div>
-        <div class="flex justify-between flex-col lg:flex-row lg:mx-16 my-5">
+        <div class="flex justify-between flex-col lg:flex-row my-5">
             <div class="relative w-full h-64 lg:h-96">
                 <iframe class="absolute top-0 left-0 w-full h-full rounded-2xl"
                     src="{{ "https://www.youtube.com/embed/{$lessonShow->video}" }}" title="YouTube video player"

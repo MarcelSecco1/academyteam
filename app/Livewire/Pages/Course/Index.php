@@ -12,7 +12,7 @@ class Index extends Component
 {
     use WithPagination;
 
-    private const PAGINATE = 10;
+    private const PAGINATE = 5;
 
     #[Url('course')]
     public $search;
