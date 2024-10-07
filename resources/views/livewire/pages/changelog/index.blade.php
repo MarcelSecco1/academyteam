@@ -1,4 +1,4 @@
-<div class="bg-white py-24 sm:py-10">
+<div class="bg-white py-10">
     <div class="mx-auto max-w-2xl px-6 lg:max-w-7xl lg:px-8">
         <h2 class="text-base/7 font-semibold text-primary">Atualizações</h2>
         <p class="mt-2 max-w-xl text-pretty text-4xl font-medium tracking-tight text-gray-950 sm:text-5xl">
@@ -12,10 +12,11 @@
                     <img class="h-80 object-cover object-left"
                         src="https://tailwindui.com/plus/img/component-images/bento-01-speed.png" alt="">
                     <div class="p-10 pt-4">
-                        <h3 class="text-sm/4 font-semibold text-indigo-600">Speed</h3>
-                        <p class="mt-2 text-lg/7 font-medium tracking-tight text-gray-950">Built for power users</p>
-                        <p class="mt-2 max-w-lg text-sm/6 text-gray-600">Sed congue eros non finibus molestie.
-                            Vestibulum euismod augue.</p>
+                        <h3 class="text-sm/4 font-semibold text-indigo-600">Novo curso lançado</h3>
+                        <p class="mt-2 text-lg/7 font-medium tracking-tight text-gray-950">Curso de Laravel</p>
+                        <p class="mt-2 max-w-lg text-sm/6 text-gray-600">
+                            Aqui aprendemos sobre o framework Laravel, um dos mais utilizados no mercado e sua possível utilização.
+                        </p>
                     </div>
                 </div>
                 <div

@@ -1,4 +1,4 @@
-<div class="bg-white py-24 sm:py-10">
+<div class="bg-white py-10">
     <div class="mx-auto max-w-2xl px-6 lg:max-w-7xl lg:px-8">
         <h2 class="text-base/7 font-semibold text-primary">Cursos / Curso de {{ $course->name }}</h2>
         <p class="mt-2 max-w-xl text-pretty text-4xl font-medium tracking-tight text-gray-950 sm:text-5xl">
@@ -16,7 +16,7 @@
                     <p class="md:space-y-5">
                         <x-badge text="{{ $course->minister->name }}" class="bg-primary text-white" />
                     </p>
-                    <p class="text-base leading-7 text-gray-700">{{ $course->description }}</p>
+                    <p class="text-base leading-7 text-gray-700 lg:mt-5">{{ $course->description }}</p>
                     <p class="md:space-y-5">
                         <x-badge text="{{ 'Horas: ' . round($lessonsTime / 60 / 60) . 'h' }}"
                             class="bg-primary text-white" />
@@ -44,7 +44,7 @@
                 </iframe>
             </div>
 
-            <div x-data="{ openModule: null }" class="space-y-4 w-full px-10">
+            <div x-data="{ openModule: null }" class="space-y-4 w-full mt-5 lg:mt-0 lg:px-10">
                 @foreach ($course->modules as $module)
                     <div class="border border-indigo-900 dark:border-gray-700 rounded-lg overflow-hidden">
                         <!-- Cabeçalho do Módulo -->

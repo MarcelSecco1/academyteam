@@ -1,8 +1,8 @@
-<div class="bg-white py-24 sm:py-10">
+<div class="bg-white py-10">
     <div class="mx-auto max-w-2xl px-6 lg:max-w-7xl lg:px-8">
         <h2 class="text-base/7 font-semibold text-primary">Cursos</h2>
         <p class="mt-2 max-w-xl text-pretty text-4xl font-medium tracking-tight text-gray-950 sm:text-5xl">
-           Cursos disponíveis
+            Cursos disponíveis
         </p>
         <div class="flex flex-col items-start justify-start">
             {{-- <h1 class="text-primary text-4xl font-bold">Cursos</h1> --}}
@@ -19,7 +19,7 @@
 
         <div class="mt-14 space-y-20  lg:space-y-20">
             @if ($courses->isEmpty())
-                <div class="flex flex-col items-center">
+                <div class="flex flex-col">
                     <h1 class="text-gray-700 text-base font-bold">Nenhum curso encontrado</h1>
                 </div>
             @endif
@@ -35,7 +35,8 @@
                     </div>
                     <div>
                         <div class="flex items-center gap-x-4 text-xs">
-                            <time datetime="2020-03-16" class="text-gray-500">
+                            <time datetime="{{ $course->created_at }}" class="text-gray-500">
+                                Lançado em
                                 {{ \Carbon\Carbon::parse($course->created_at)->format('M d, Y') }}
                             </time>
                         </div>
@@ -47,7 +48,7 @@
 
                                 </a>
                             </h3>
-                            <p class="mt-5 text-sm leading-6 text-gray-600">
+                            <p class="mt-3 text-sm leading-6 text-gray-600">
                                 {{ $course->description }}
                             </p>
                         </div>
