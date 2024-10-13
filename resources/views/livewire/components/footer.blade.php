@@ -1,8 +1,9 @@
 <footer class="bg-white">
-    <div class="mx-auto px-6 py-12 md:flex md:items-center md:justify-center lg:px-8 flex-col space-y-4">
+    <div class="mx-auto px-6 py-12 flex items-center justify-center lg:px-8 flex-col space-y-4">
         <img src="{{ asset('assets/images/200x200.png') }}" alt="AcademyTeam" height="50px" width="50px">
         <div class="mt-8 md:order-1 md:mt-0">
-            <p class="text-center text-sm leading-5 text-primary font-semibold">&copy; 2024 AcademyTeam, feito por
+            <p class="text-center text-sm leading-5 text-primary font-semibold">&copy; {{ date('Y') }} AcademyTeam,
+                feito por
                 alunos
             </p>
         </div>

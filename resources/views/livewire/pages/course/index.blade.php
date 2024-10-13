@@ -1,23 +1,32 @@
 <div class="bg-white py-10">
     <div class="mx-auto max-w-2xl px-6 lg:max-w-7xl lg:px-8">
-        <h2 class="text-base/7 font-semibold text-primary">Cursos</h2>
-        <p class="mt-2 max-w-xl text-pretty text-4xl font-medium tracking-tight text-gray-950 sm:text-5xl">
-            Cursos disponíveis
-        </p>
-        <div class="flex flex-col items-start justify-start">
-            {{-- <h1 class="text-primary text-4xl font-bold">Cursos</h1> --}}
-            <div class="flex mt-10">
-                <input type="text" name="search" id="search" placeholder="Pesquise por um curso..."
-                    wire:model.live="search"
-                    class="block w-full rounded-md border-0 py-2 pr-56 lg:pr-96 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-primary sm:text-sm sm:leading-6 placeholder:w-60">
-                <button
-                    class="ml-2 inline-flex items-center px-4 py-2 border border-transparent text-sm leading-5 font-medium rounded-md text-white bg-primary hover:bg-primary-dark focus:outline-none focus:border-primary focus:ring-primary active:bg-primary-dark transition ease-in-out duration-150">
-                    Pesquisar
-                </button>
+        <div class="animate__animated animate__bounceInDown flex w-full">
+            <div class="justify-start">
+                <h2 class="text-base/7 font-semibold text-primary">Cursos</h2>
+                <p class="mt-2 max-w-xl text-pretty text-4xl font-medium tracking-tight text-gray-950 sm:text-5xl">
+                    Cursos disponíveis
+                </p>
+                <div class="flex flex-row md:flex-col">
+                    {{-- <h1 class="text-primary text-4xl font-bold">Cursos</h1> --}}
+                    <div class="flex mt-10">
+                        <input type="text" name="search" id="search" placeholder="Pesquise por um curso..."
+                            wire:model.live="search"
+                            class="block w-full rounded-md border-0 py-2 pr-56 lg:pr-96 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-primary sm:text-sm sm:leading-6 placeholder:w-60">
+                        <button
+                            class="ml-2 inline-flex items-center px-4 py-2 border border-transparent text-sm leading-5 font-medium rounded-md text-white bg-primary hover:bg-primary-dark focus:outline-none focus:border-primary focus:ring-primary active:bg-primary-dark transition ease-in-out duration-150">
+                            Pesquisar
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="hidden lg:flex mx-auto justify-end">
+                <img src="{{ asset('assets/svg/undraw_active_options_re_8rj3.svg') }}" alt="Vários cursos"
+                    class="w-96 h-60 ">
             </div>
         </div>
 
-        <div class="mt-14 space-y-20  lg:space-y-20">
+
+        <div class="mt-14 space-y-20  lg:space-y-20 animate__animated animate__fadeInRight">
             @if ($courses->isEmpty())
                 <div class="flex flex-col">
                     <h1 class="text-gray-700 text-base font-bold">Nenhum curso encontrado</h1>
@@ -41,14 +50,14 @@
                             </time>
                         </div>
                         <div class="group relative ">
-                            <h3 class="mt-3 text-lg font-semibold leading-6 text-gray-900 group-hover:text-gray-600">
+                            <h3 class="mt-3 text-xl font-bold leading-6 text-gray-900 group-hover:text-gray-600">
                                 <a href="{{ route('course.show', ['course' => $course->uuid]) }}" wire:navigate>
                                     <span class="absolute inset-0"></span>
                                     Curso de {{ $course->name }}
 
                                 </a>
                             </h3>
-                            <p class="mt-3 text-sm leading-6 text-gray-600">
+                            <p class="mt-3 text-base leading-6 text-gray-600">
                                 {{ $course->description }}
                             </p>
                         </div>
@@ -60,11 +69,10 @@
                                     <p class="text-sm text-gray-500">
                                         Ministrado por
                                     </p>
-                                    <p class="font-semibold text-gray-900">
+                                    <p class="font-bold text-gray-900">
 
                                         <span class="absolute inset-0"></span>
                                         {{ $course->minister->name }}
-
                                     </p>
 
                                 </div>
@@ -73,7 +81,9 @@
                     </div>
                 </article>
             @endforeach
-            {{ $courses->links() }}
+            <div class="my-3">
+                {{ $courses->links() }}
+            </div>
         </div>
     </div>
 </div>

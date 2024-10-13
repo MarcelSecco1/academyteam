@@ -37,7 +37,7 @@
 
     @livewire('components.navbar')
 
-    <main class="py-10 lg:pl-72 flex-grow">
+    <main class="py-3 lg:pl-72 flex-grow">
         <div class="px-4 sm:px-6 lg:px-8">
             {{ $slot }}
         </div>

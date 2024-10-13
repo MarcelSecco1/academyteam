@@ -1,11 +1,14 @@
 <div class="bg-white py-10">
     <div class="mx-auto max-w-2xl px-6 lg:max-w-7xl lg:px-8">
-        <h2 class="text-base/7 font-semibold text-primary">Cursos / Curso de {{ $course->name }}</h2>
-        <p class="mt-2 max-w-xl text-pretty text-4xl font-medium tracking-tight text-gray-950 sm:text-5xl">
-            Bem vindo ao Curso de {{ $course->name }}
-        </p>
+        <div class="animate__animated animate__bounceInDown">
+            <h2 class="text-base/7 font-semibold text-primary">Cursos / Curso de {{ $course->name }}</h2>
+            <p class="mt-2 max-w-xl text-pretty text-4xl font-medium tracking-tight text-gray-950 sm:text-5xl">
+                Bem vindo ao Curso de {{ $course->name }}
+            </p>
+            
+        </div>
 
-        <div class="flex justify-center lg:my-10">
+        <div class="flex justify-center lg:my-10 animate__animated animate__bounceInRight">
             <div class="flex justify-center flex-col lg:flex-row">
                 <div class="flex justify-center my-10 lg:my-0">
                     <img src="{{ '/storage/' . $course->image }}" alt="{{ $course->name }}"
@@ -27,15 +30,15 @@
                 </div>
             </div>
         </div>
-        <div class="mt-10">
+        <div class="mt-10 animate__animated animate__bounceInRight">
             <div class="flex justify-start lg:mt-11">
-                <h2 class="text-2xl font-bold tracking-tight text-gray-900 sm:text-2xl text-primary text-center">
+                <h2 class="text-2xl font-bold tracking-tight sm:text-2xl text-primary text-center">
                     {{ $lessonShow->name }}
                 </h2>
             </div>
         </div>
-        <div class="flex justify-between flex-col lg:flex-row my-5">
-            <div class="relative w-full h-64 lg:h-96">
+        <div class="flex justify-between flex-col lg:flex-row my-5 ">
+            <div class="relative w-full h-64 lg:h-96 animate__animated animate__bounceInRight">
                 <iframe class="absolute top-0 left-0 w-full h-full rounded-2xl"
                     src="{{ "https://www.youtube.com/embed/{$lessonShow->video}" }}" title="YouTube video player"
                     frameborder="0"
@@ -44,7 +47,7 @@
                 </iframe>
             </div>
 
-            <div x-data="{ openModule: null }" class="space-y-4 w-full mt-5 lg:mt-0 lg:px-10">
+            <div x-data="{ openModule: null }" class="space-y-4 w-full mt-5 lg:mt-0 lg:px-10 animate__animated animate__bounceInRight">
                 @foreach ($course->modules as $module)
                     <div class="border border-indigo-900 dark:border-gray-700 rounded-lg overflow-hidden">
                         <!-- Cabeçalho do Módulo -->
