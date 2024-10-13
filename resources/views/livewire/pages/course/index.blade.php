@@ -26,7 +26,7 @@
         </div>
 
 
-        <div class="mt-14 space-y-20  lg:space-y-20 animate__animated animate__fadeInRight">
+        <div class="mt-14 space-y-20  lg:space-y-20 animate__animated animate__bounceInRight">
             @if ($courses->isEmpty())
                 <div class="flex flex-col">
                     <h1 class="text-gray-700 text-base font-bold">Nenhum curso encontrado</h1>
