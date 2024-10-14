@@ -63,7 +63,7 @@
                                 </a>
                             </li>
                             <li>
-                                <a href="#"
+                                <a href="{{ route('team') }}" wire:navigate
                                     class="group flex gap-x-3 rounded-md p-2 text-sm font-semibold leading-6 {{ request()->is('time') ? 'bg-primary text-white' : 'text-primary hover:text-white hover:bg-primary' }}">
                                     <svg class="h-6 w-6 shrink-0 {{ request()->is('time') ? 'text-white' : 'text-primary group-hover:text-white' }}"
                                         viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true"
@@ -88,7 +88,7 @@
                                     Atualizações
                                 </a>
                             </li>
-                            <li>
+                            {{-- <li>
                                 <a href="#"
                                     class="group flex gap-x-3 rounded-md p-2 text-sm font-semibold leading-6 {{ request()->is('suporte') ? 'bg-primary text-white' : 'text-primary hover:text-white hover:bg-primary' }}">
                                     <svg class="h-6 w-6 shrink-0 {{ request()->is('suporte') ? 'text-white' : 'text-primary group-hover:text-white' }}"
@@ -99,7 +99,7 @@
                                     </svg>
                                     Suporte
                                 </a>
-                            </li>
+                            </li> --}}
                         </ul>
                     </nav>
                 </div>
@@ -149,7 +149,7 @@
                                 </a>
                             </li>
                             <li>
-                                <a href="#"
+                                <a href="{{ route('team') }}" wire:navigate
                                     class="group flex gap-x-3 rounded-md p-2 text-sm font-semibold leading-6 {{ request()->is('time') ? 'bg-primary text-white' : 'text-primary hover:text-white hover:bg-primary' }}">
                                     <svg class="h-6 w-6 shrink-0 {{ request()->is('time') ? 'text-white' : 'text-primary group-hover:text-white' }}"
                                         viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
@@ -174,7 +174,7 @@
                                     Atualizações
                                 </a>
                             </li>
-                            <li>
+                            {{-- <li>
                                 <a href="#"
                                     class="group flex gap-x-3 rounded-md p-2 text-sm font-semibold leading-6 {{ request()->is('suporte') ? 'bg-primary text-white' : 'text-primary hover:text-white hover:bg-primary' }}">
                                     <svg class="h-6 w-6 shrink-0 {{ request()->is('suporte') ? 'text-white' : 'text-primary group-hover:text-white' }}"
@@ -185,7 +185,7 @@
                                     </svg>
                                     Suporte
                                 </a>
-                            </li>
+                            </li> --}}
 
                         </ul>
                     </li>

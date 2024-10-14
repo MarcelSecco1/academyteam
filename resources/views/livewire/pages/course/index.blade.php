@@ -20,7 +20,7 @@
                 </div>
             </div>
             <div class="hidden lg:flex mx-auto justify-end">
-                <img src="{{ asset('assets/svg/undraw_active_options_re_8rj3.svg') }}" alt="Vários cursos"
+                <img src="{{ asset('assets/svg/undraw_search_app_oso2.svg') }}" alt="Vários cursos"
                     class="w-96 h-60 ">
             </div>
         </div>
