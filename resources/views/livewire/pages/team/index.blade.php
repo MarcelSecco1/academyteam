@@ -23,8 +23,8 @@
                     </p>
                     <ul role="list" class="mt-2 flex gap-x-6">
                         <li>
-                            <a href="www.linkedin.com/in/marcel-secco-658081266"
-                                class="text-primary hover:text-gray-500" target="_blank">
+                            <a href="https://www.linkedin.com/in/marcel-secco-658081266" wire:nagivate
+                                class="text-primary hover:text-verde" target="_blank">
                                 <span class="sr-only">LinkedIn</span>
                                 <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
                                     <path fill-rule="evenodd"
@@ -44,8 +44,8 @@
                     <p class="text-base leading-7 text-gray-600">Documentação</p>
                     <ul role="list" class="mt-2 flex gap-x-6">
                         <li>
-                            <a href="www.linkedin.com/in/pedro-guilherme-trindade-berardo-229b9a2b8"
-                                class="text-primary hover:text-gray-500" target="_blank">
+                            <a href="https://www.linkedin.com/in/pedro-guilherme-trindade-berardo-229b9a2b8" wire:nagivate
+                                class="text-primary hover:text-verde" target="_blank">
                                 <span class="sr-only">LinkedIn</span>
                                 <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
                                     <path fill-rule="evenodd"
@@ -63,7 +63,8 @@
                     <p class="text-base leading-7 text-gray-600">Editor e Ministrante</p>
                     <ul role="list" class="mt-2 flex gap-x-6">
                         <li>
-                            <a href="#" class="text-primary hover:text-gray-500" target="_blank">
+                            <a href="https://www.linkedin.com/in/bruno-morais-4b97a2236"
+                                class="text-primary hover:text-verde" target="_blank" wire:nagivate>
                                 <span class="sr-only">LinkedIn</span>
                                 <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
                                     <path fill-rule="evenodd"
@@ -82,8 +83,8 @@
                     <p class="text-base leading-7 text-gray-600">Organizador e Ministrante</p>
                     <ul role="list" class="mt-2 flex gap-x-6">
                         <li>
-                            <a href="https://www.linkedin.com/in/paulo-junior-dev"
-                                class="text-primary hover:text-gray-500" target="_blank">
+                            <a href="#" wire:nagivate
+                                class="text-primary hover:text-verde" target="_blank">
                                 <span class="sr-only">LinkedIn</span>
                                 <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
                                     <path fill-rule="evenodd"
@@ -103,7 +104,8 @@
                     <ul role="list" class="mt-2 flex gap-x-6">
 
                         <li>
-                            <a href="#" class="text-primary hover:text-gray-500" target="_blank">
+                            <a href="https://www.linkedin.com/in/bruno-morais-4b97a2236"
+                                class="text-primary hover:text-verde" target="_blank">
                                 <span class="sr-only">LinkedIn</span>
                                 <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
                                     <path fill-rule="evenodd"
