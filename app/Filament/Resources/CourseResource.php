@@ -44,12 +44,10 @@ class CourseResource extends Resource
                     ->placeholder('Selecione um ministrante')
                     ->options(CoursesMinister::all()->pluck('name', 'id'))
                     ->required(),
-
                 TextInput::make('description')
                     ->label('Descrição')
                     ->columnSpanFull()
                     ->maxLength(255),
-
             ]);
     }
 
