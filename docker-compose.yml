@@ -10,8 +10,6 @@ services:
         working_dir: /var/www/
         volumes:
             - ./:/var/www
-        depends_on:
-            - redis
         networks:
             - laravel
 
@@ -43,10 +41,6 @@ services:
         networks:
             - laravel
     # redis
-    redis:
-        image: redis:latest
-        networks:
-            - laravel
 
 networks:
     laravel:

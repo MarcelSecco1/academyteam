@@ -23,6 +23,6 @@ class Course extends Model
 
     public function minister()
     {
-        return $this->belongsTo(CoursesMinister::class);
+        return $this->belongsTo(Minister::class);
     }
 }

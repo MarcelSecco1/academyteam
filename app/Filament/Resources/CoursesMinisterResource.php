@@ -4,7 +4,7 @@ namespace App\Filament\Resources;
 
 use App\Filament\Resources\CoursesMinisterResource\Pages;
 use App\Filament\Resources\CoursesMinisterResource\RelationManagers;
-use App\Models\CoursesMinister;
+use App\Models\Minister;
 use Filament\Forms;
 use Filament\Forms\Form;
 use Filament\Resources\Resource;
@@ -15,7 +15,7 @@ use Illuminate\Database\Eloquent\SoftDeletingScope;
 
 class CoursesMinisterResource extends Resource
 {
-    protected static ?string $model = CoursesMinister::class;
+    protected static ?string $model = Minister::class;
 
     protected static ?string $modelLabel = 'Ministrante';
     protected static ?string $pluralModelLabel = 'Ministrantes';

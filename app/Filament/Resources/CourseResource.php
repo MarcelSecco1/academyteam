@@ -3,9 +3,8 @@
 namespace App\Filament\Resources;
 
 use App\Filament\Resources\CourseResource\Pages;
-use App\Filament\Resources\CourseResource\RelationManagers;
 use App\Models\Course;
-use App\Models\CoursesMinister;
+use App\Models\Minister;
 use Filament\Forms;
 use Filament\Forms\Components\FileUpload;
 use Filament\Forms\Components\Select;
@@ -15,8 +14,7 @@ use Filament\Resources\Resource;
 use Filament\Tables;
 use Filament\Tables\Filters\SelectFilter;
 use Filament\Tables\Table;
-use Illuminate\Database\Eloquent\Builder;
-use Illuminate\Database\Eloquent\SoftDeletingScope;
+
 
 class CourseResource extends Resource
 {
@@ -42,7 +40,8 @@ class CourseResource extends Resource
                 Select::make('minister_id')
                     ->label('Ministrante')
                     ->placeholder('Selecione um ministrante')
-                    ->options(CoursesMinister::all()->pluck('name', 'id'))
+                    ->options(Minister::pluck('name', 'id')->toArray())
+                    ->relationship('minister', 'name')
                     ->required(),
                 TextInput::make('description')
                     ->label('Descrição')
@@ -88,7 +87,7 @@ class CourseResource extends Resource
             ->filters([
                 SelectFilter::make('minister_id')
                     ->label('Ministrante')
-                    ->options(fn() => CoursesMinister::all()->pluck('name', 'id')->toArray()),
+                    ->options(fn() => Minister::all()->pluck('name', 'id')->toArray()),
 
             ])
             ->actions([
@@ -106,7 +105,7 @@ class CourseResource extends Resource
     public static function getRelations(): array
     {
         return [
-            //
+            // CoursesMinister::class,
         ];
     }
 
