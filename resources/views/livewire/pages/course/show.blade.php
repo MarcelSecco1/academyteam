@@ -12,14 +12,14 @@
             </div>
         </div>
 
-        <div class="flex justify-center lg:my-10 animate__animated animate__bounceInRight">
+        <div class="flex justify-start lg:my-10 animate__animated animate__bounceInRight">
             <div class="flex justify-center flex-col lg:flex-row">
                 <div class="flex justify-center my-10 lg:my-0">
                     <img src="{{ '/storage/' . $course->image }}" alt="{{ $course->name }}"
                         class="rounded-2xl object-cover" width="200px" height="200px" class="mx-auto">
                 </div>
 
-                <div class="lg:w-full mx-10 flex justify-start">
+                <div class="lg:w-full mx-10">
                     <p class="md:space-y-5">
                         <x-badge text="{{ $course->minister->name }}" class="bg-primary text-white" />
                     </p>
