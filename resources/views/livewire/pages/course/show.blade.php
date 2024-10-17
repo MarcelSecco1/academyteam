@@ -19,7 +19,7 @@
                         class="rounded-2xl object-cover" width="200px" height="200px" class="mx-auto">
                 </div>
 
-                <div class="lg:w-full mx-10">
+                <div class="lg:w-full mx-10 flex justify-start">
                     <p class="md:space-y-5">
                         <x-badge text="{{ $course->minister->name }}" class="bg-primary text-white" />
                     </p>
