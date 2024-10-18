@@ -1,27 +1,29 @@
 <div class="bg-white py-10">
     <div class="mx-auto max-w-2xl px-6 lg:max-w-7xl lg:px-8">
-        <div class="animate__animated animate__bounceInDown flex w-full">
-            <div class="justify-start">
+        <div class="animate__animated animate__bounceInDown flex flex-col lg:flex-row w-full">
+            <div class="flex-1">
                 <h2 class="text-base/7 font-semibold text-primary">Cursos</h2>
                 <p class="mt-2 max-w-xl text-pretty text-4xl font-medium tracking-tight text-gray-950 sm:text-5xl">
                     Cursos disponíveis
                 </p>
                 <div class="flex flex-row md:flex-col">
-                    {{-- <h1 class="text-primary text-4xl font-bold">Cursos</h1> --}}
                     <div class="flex mt-10">
-                        <input type="text" name="search" id="search" placeholder="Pesquise por um curso..."
-                            wire:model.live="search"
-                            class="block w-full rounded-md border-0 py-2 pr-56 lg:pr-96 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-primary sm:text-sm sm:leading-6 placeholder:w-60">
-                        <button
-                            class="ml-2 inline-flex items-center px-4 py-2 border border-transparent text-sm leading-5 font-medium rounded-md text-white bg-primary hover:bg-primary-dark focus:outline-none focus:border-primary focus:ring-primary active:bg-primary-dark transition ease-in-out duration-150">
-                            Pesquisar
-                        </button>
+                        <div class="mt-2 flex rounded-md shadow-sm w-full">
+                            <span
+                                class="inline-flex items-center rounded-l-md border border-r-0 border-gray-300 px-3 text-gray-500 sm:text-sm">Curso
+                                de </span>
+                            <input type="text" name="company-website" id="company-website"
+                                class="block w-full min-w-0 flex-1 rounded-none rounded-r-md border-0 py-1.5 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-primary sm:text-sm sm:leading-6"
+                                placeholder="Pesquise por um curso..." wire:model.live="search"
+                                wire:keydown.enter="search" />
+                        </div>
+
                     </div>
                 </div>
             </div>
-            <div class="hidden lg:flex mx-auto justify-end">
+            <div class="hidden lg:flex flex-1 justify-end items-center">
                 <img src="{{ asset('assets/svg/undraw_search_app_oso2.svg') }}" alt="Vários cursos"
-                    class="w-96 h-60 ">
+                    class="w-80 h-60 lg:w-96 lg:h-60">
             </div>
         </div>
 

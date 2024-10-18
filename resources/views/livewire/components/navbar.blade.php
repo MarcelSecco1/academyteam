@@ -197,7 +197,7 @@
                             @foreach ($courses as $course)
                                 <li>
                                     <!-- Current: "bg-primary text-white", Default: "text-primary hover:text-white hover:bg-primary" -->
-                                    <a href="#"
+                                    <a href="{{ route('course.show', ['course' => $course->uuid]) }}" wire:navigate
                                         class="group flex gap-x-3 rounded-md p-2 text-sm font-semibold leading-6 text-primary hover:bg-primary hover:text-white">
                                         <span
                                             class="flex h-6 w-6 shrink-0 items-center justify-center rounded-lg border border-verde bg-verde text-[0.625rem] font-medium text-white">

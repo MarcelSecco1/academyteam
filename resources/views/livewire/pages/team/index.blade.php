@@ -60,7 +60,7 @@
                     <img class="aspect-[3/2] w-full rounded-2xl object-cover"
                         src="{{ asset('assets/images/team/bruno.jpg') }}" alt="">
                     <h3 class="mt-6 text-lg font-semibold leading-8 tracking-tight text-gray-900">Bruno Morais</h3>
-                    <p class="text-base leading-7 text-gray-600">Editor e Ministrante</p>
+                    <p class="text-base leading-7 text-gray-600">Editor</p>
                     <ul role="list" class="mt-2 flex gap-x-6">
                         <li>
                             <a href="https://www.linkedin.com/in/bruno-morais-4b97a2236"
